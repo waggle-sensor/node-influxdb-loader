@@ -1,0 +1,4 @@
+pywagglemsg==0.3.*
+influxdb_client==1.26.*
+pika==1.2.*
+prometheus-client==0.13.*
