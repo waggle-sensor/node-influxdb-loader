@@ -33,7 +33,7 @@ def assert_valid_message(msg):
         assert_type(k, str)
         assert_maxlen(k, 64)
         assert_type(v, str)
-        assert_maxlen(v, 64)
+        assert_maxlen(v, 256)
     if "node" not in msg.meta:
         raise KeyError("message missing node meta field")
 
