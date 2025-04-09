@@ -198,6 +198,7 @@ def main():
         logging.info("connected to rabbitmq")
 
         ch = conn.channel()
+        ch.basic_qos(prefetch_count=2 * args.max_batch_size)
         ch.queue_declare(args.rabbitmq_queue, durable=True)
         ch.queue_bind(args.rabbitmq_queue, args.rabbitmq_exchange, "#")
 
